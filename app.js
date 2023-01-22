@@ -6,6 +6,10 @@ const port = 3000
 app.get('/', (req, res) => {
     var htmlContent = '<html>Whatever</html>';
     fs.writeFile('./my-page.html', htmlContent, (error) => { /* handle error */ });
+    res.status(200).send({
+      message: 'Hello from AI!'
+    })
+    
 })
 
 app.listen(port, () => {
